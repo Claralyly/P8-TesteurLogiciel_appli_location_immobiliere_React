@@ -1,0 +1,63 @@
+.slideshow {
+  position: relative;
+  
+  margin-top: 60px;
+}
+
+.slideshow img {
+  
+  border-radius: 25px;
+  width: 1240px;
+  height: 415px;
+  object-fit: cover;
+}
+
+.slideshow .prev, .slideshow .next {
+  position: absolute;
+  top: 50%;
+  width: 96px; /* Largeur de la flèche */
+  height: 119px; /* Hauteur de la flèche */
+  padding: 0; 
+  margin-top: -59.5px; /* Ajuster pour centrer verticalement */
+  color: white; 
+  font-weight: bold;
+  font-size: 48px; /* Taille de la police ajustée pour être bien visible */
+  border: none; 
+  user-select: none;
+  background-color: transparent; 
+  outline: none;
+  cursor: pointer; 
+  z-index: 1; /* Assurer que les flèches sont au-dessus de l'image */
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.slideshow .next {
+  right: 10px; /* Ajuster la position de la flèche droite */
+}
+
+.slideshow .prev {
+  left: 10px; /* Ajuster la position de la flèche gauche */
+}
+
+.pagination-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 32px;
+  color: white;
+  padding: 5px 10px;
+  font-size: 18px;
+  text-align: center; 
+  line-height: 32px; 
+}
+
+.dots, .dot {
+  display: none;
+}
+
+
+

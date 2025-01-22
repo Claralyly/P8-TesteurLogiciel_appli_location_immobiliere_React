@@ -1,0 +1,50 @@
+.card {
+  width: 340px;
+  height: 340px;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden; /* Assure-toi que l'image ne dépasse pas */
+  position: relative; /* Permet de positionner le texte par-dessus */
+}
+
+.card img {
+  width: 100%; /* Pour que l'image prenne toute la largeur de la carte */
+  height: 100%; /* Pour que l'image prenne toute la hauteur de la carte */
+  border-radius: 8px;
+  object-fit: cover; /* Pour que l'image s'adapte bien à la taille de la carte */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  z-index: 1;
+  position: absolute; /* Assure que le texte soit par-dessus l'image */
+  bottom: 10px; /* Ajuste cette valeur pour positionner le texte plus bas */
+  left: 10px; /* Garde le texte un peu éloigné du bord gauche */
+}
+
+/* Media Queries pour les écrans plus petits */ 
+@media screen and (max-width: 768px) {
+  .card {
+    width: 335px;
+    height: 255px;
+    padding: 0 !important;
+  }
+  .card img {
+    width: 335px;
+    height: 255px;
+  }
+ 
+  
+}

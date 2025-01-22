@@ -1,0 +1,139 @@
+.logement {
+  padding: 20px;
+  width: 1440px;
+  height: auto;
+  margin: auto;
+}
+
+.titre {
+  font-family: 'Arial', sans-serif;
+  
+}
+
+.titreP1 {
+  color: #ff6060;
+  text-align: left;
+  font-size: 36px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.titreP1 p {
+  margin: 0;
+} 
+
+.location {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  margin-top: -10px;
+}
+
+.titreP2 {
+  display: none;
+}
+
+.host-info {
+  display: flex;
+  align-items: center;
+}
+
+.host-info p {
+  width: 93px;
+  height: 52px;
+  font-size: 18px;
+  color: #ff6060;
+  display: flex;
+  align-items: center;
+}
+
+.host-info img {
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  margin-left: 10px;
+}
+
+.tags-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #ff6060;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: auto;
+  height: auto;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  color: #bbb;
+  font-size: 36px; /* Taille ajustée à celle que tu avais avant */
+  margin-right: 5px; /* Espacement entre les étoiles */
+}
+
+.star.filled {
+  color: #ff6060;
+}
+
+
+.description_column {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.description_title h2 {
+  font-weight: 500;
+  color: #ff6060;
+}
+
+.location {
+  margin: 5px 0;
+  color: black;
+}
+
+.collapse_column {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 76px;
+}
+
+@media (max-width: 767.98px) {
+  .description_column {
+    flex-direction: column;
+  }
+
+  .description_host {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .collapse_column {
+    flex-direction: column;
+    gap: 0;
+  }
+}

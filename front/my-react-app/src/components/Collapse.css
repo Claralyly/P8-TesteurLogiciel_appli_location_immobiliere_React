@@ -1,0 +1,166 @@
+/* Style générique pour le Collapse */
+
+.collapse-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.collapse-header i {
+  margin-right: 10px;
+  order: -1; /* Assurer que le chevron apparaît avant le texte */
+}
+
+/* Supprimer les chevrons de droite */
+.collapse-header .fa-chevron-up,
+.collapse-header .fa-chevron-down {
+  display: none;
+}
+
+.collapse-content.open {
+  display: block;
+  margin: 0;
+}
+
+.collapse-header {
+  color: white;
+  justify-content: flex-start;
+}
+
+/* Styles spécifiques pour la page Logement */
+.details {
+  margin: 20px 0;
+  width: 1240px;
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+}
+
+.collapse-logement .collapse-header {
+  background-color: #FF6060;
+  justify-content: flex-start;
+  width: 582px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0 15px; /* Ajout de marges pour le contenu */
+}
+
+.collapse-logement .collapse-content {
+  padding: 10px 15px; /* Ajout de marges pour le contenu */
+  background: #f6f6f6; /* Couleur de fond gris clair */
+  display: none;
+  border: 1px solid #ddd;
+  border-top: none;
+  width: 582px; /* Limite la largeur à 582px */
+}
+
+.collapse-logement .collapse-header::after {
+  content: '\f0d7'; /* Chevron vers le bas de Font Awesome */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+  margin-left: auto; /* Assurer que le chevron reste à droite */
+}
+
+.collapse-logement .collapse-header.open::after {
+  transform: rotate(180deg);
+}
+
+/* Styles spécifiques pour la page Apropos */
+.collapse-apropos .collapse-header {
+  background-color: #FF6060;
+  border-radius: 5px;
+  width: 1023px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.valeur {
+  margin: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div .collapse {
+  margin-bottom: 30px;
+  border: none;
+}
+
+div .collapse-header::after {
+  content: '\f0d7'; /* Chevron vers le bas de Font Awesome */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+div .collapse-content {
+  padding: 10px;
+  background: #fff;
+  display: none;
+}
+
+div .collapse-content.open {
+  display: block;
+  background-color: #F6F6F6;
+}
+
+div .collapse-header.open::after {
+  transform: rotate(180deg);
+}
+
+div .collapse-content.open p {
+  text-align: left;
+}
+
+/* Media Queries pour les écrans plus petits */
+@media (max-width: 768px) {
+  
+
+  div .collapse {
+    width: 335px;
+  }
+
+  div .collapse-header {
+    width: 335px;
+    height: 30px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  div .collapse-header h2 {
+    font-size: 16px;
+  }
+
+  div .collapse-content {
+    width: 335px; /* Ajustement de la largeur pour correspondre à l'en-tête */
+    padding: 10px;
+    font-size: 14px;
+  }
+  .collapse-apropos .collapse-header {
+    width: 335px;
+    height: 30px;
+  }
+  
+  .collapse-header 
+  /* Styles spécifiques pour la page Logement */
+  .collapse-logement .collapse-header {
+    width: 335px;
+    height: 30px;
+  }
+  
+}
+
+
+  
+
+
