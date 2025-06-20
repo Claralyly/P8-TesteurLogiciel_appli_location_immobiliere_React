@@ -74,10 +74,6 @@
   color: white;
   padding: 5px 10px;
   border-radius: 10px;
-  
-  
-  
-  
 }
 
 .rating {
@@ -195,6 +191,9 @@
 }
 
 /* Responsive Design */
+.logement{
+  width: 513px;
+}
 @media (max-width: 767.98px) {
   .collapse_column {
     flex-direction: column; /* Les collapsibles s'empilent verticalement */
@@ -217,20 +216,13 @@
   .collapse_column {
     margin-left: 50px;
   }
-  .logement {
-    width: 335px;
-  }
+ 
   .titreP1 {
     margin-left: 70px;
     width: 336px;
   }
-  .titreP1 p {
-    
+  
 
-  }
-.titreP1 .location {
-  font-size: 14px;
-}
 .tags-rating {
   display: flex;
   flex-direction: column;
@@ -241,7 +233,8 @@
   margin-bottom: 20px;
 }
 .rating {
-  
+  display: flex;
+  flex-direction: row;
 }
 .host-info {
   
