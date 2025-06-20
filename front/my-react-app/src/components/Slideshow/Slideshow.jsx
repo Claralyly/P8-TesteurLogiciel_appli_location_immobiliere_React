@@ -14,24 +14,30 @@ function SlideShow({ images }) {
 
   return (
     <div className="slideshow">
+      {/* Chevron gauche */}
       <button className="prev" onClick={prevSlide} aria-label="Previous slide">
-        &#x276E; {/* Caractère Unicode pour la flèche gauche */}
+        <span>&#10094;</span> {/* Utilisation du caractère Unicode pour le chevron gauche */}
       </button>
-      <img src={images[currentSlide]} alt="Slide" />
+
+      {/* Image actuelle */}
+      <img src={images[currentSlide]} alt={`Slide ${currentSlide + 1}`} />
+
+      {/* Chevron droit */}
       <button className="next" onClick={nextSlide} aria-label="Next slide">
-        &#x276F; {/* Caractère Unicode pour la flèche droite */}
+        <span>&#10095;</span> {/* Utilisation du caractère Unicode pour le chevron droit */}
       </button>
+
+      {/* Indicateur de pagination */}
       <div className="pagination-container">
-        <span className="pagination-indicator">{currentSlide + 1}/{images.length}</span>
+        <span className="pagination-indicator">
+          {currentSlide + 1}/{images.length}
+        </span>
       </div>
     </div>
   );
 }
 
 export default SlideShow;
-
-
-
 
 
 

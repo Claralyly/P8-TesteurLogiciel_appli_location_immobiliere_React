@@ -36,13 +36,16 @@
   .banner {
     height: 111px;
     width: 335px;
-    margin-left: 30px;
+    
+    
   }
   .banner-image { 
     border-radius: 25px; 
+    
   }
   .overlay { 
     border-radius: 25px; 
+    
   }
   .overlay h1 { width: 100%;  
     font-size: 18px; 

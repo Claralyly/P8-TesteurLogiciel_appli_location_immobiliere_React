@@ -4,24 +4,29 @@
   height: auto;
   margin: auto;
 }
-
+.fiche-logement{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 .titre {
   font-family: 'Arial', sans-serif;
-  
+  width: 60%;
 }
 
 .titreP1 {
   color: #ff6060;
-  text-align: left;
-  font-size: 36px;
-  font-weight: 500;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    text-align: left;
+    font-size: 36px;
+    display: flex;
+    
+    flex-direction: column;
+    
 }
+
 .titreP1 p {
   margin: 0;
-} 
+}
 
 .location {
   font-size: 18px;
@@ -36,35 +41,32 @@
 
 .host-info {
   display: flex;
-  align-items: center;
+  
+      align-items: center;
+      justify-content: flex-end;
+      
 }
 
 .host-info p {
-  width: 93px;
-  height: 52px;
   font-size: 18px;
+  font-weight: 500;
   color: #ff6060;
-  display: flex;
-  align-items: center;
+  margin: 0 10px 0 0; /* Ajoute un espace entre le texte et l'image */
+  text-align: right; /* Aligne le texte à droite */
 }
 
 .host-info img {
-  border-radius: 50%;
+  border-radius: 50%; /* Assure que la photo est ronde */
   height: 64px;
   width: 64px;
-  margin-left: 10px;
 }
 
-.tags-rating {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-}
 
 .tags {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 10px;
+  gap: 10px;
 }
 
 .tag {
@@ -72,27 +74,32 @@
   color: white;
   padding: 5px 10px;
   border-radius: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  width: auto;
-  height: auto;
+  
+  
+  
+  
 }
 
 .rating {
   display: flex;
-  align-items: center;
+ 
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.rating-star {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .star {
   color: #bbb;
-  font-size: 36px; /* Taille ajustée à celle que tu avais avant */
-  margin-right: 5px; /* Espacement entre les étoiles */
+  font-size: 36px;
+  margin-right: 5px;
 }
 
 .star.filled {
   color: #ff6060;
 }
-
 
 .description_column {
   display: flex;
@@ -112,12 +119,87 @@
   color: black;
 }
 
+/* Conteneur principal des collapsibles */
 .collapse_column {
-  margin: 0;
-  display: flex;
+  display: flex; /* Alignement horizontal */
   flex-direction: row;
-  width: 100%;
-  gap: 76px;
+  gap: 20px; /* Espacement entre les collapsibles */
+  margin-top: 20px; /* Espacement avec le reste */
+  width: 1240px;
+  margin-left: 100px;
+}
+
+/* Style des collapsibles */
+.collapse-logement {
+  flex: 1;
+  border: 1px solid #ddd; /* Bordure légère et épurée */
+  border-radius: 5px; /* Coins arrondis selon la maquette */
+  background-color: #fff;
+  overflow: hidden;
+  height: auto; /* Ajuste la hauteur selon l'état */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.collapse-logement .collapse-header {
+  display: flex; /* Utilisation de Flexbox pour le centrage */
+  justify-content: center; /* Centrer le titre et l'icône horizontalement */
+  align-items: center; /* Centrer verticalement */
+  background-color: #ff6060; /* Couleur rouge de l'en-tête */
+  color: white;
+  padding: 0 15px; /* Espacement latéral */
+  font-size: 16px; /* Taille adaptée */
+  height: 52px; /* Hauteur fixée selon la maquette */
+  cursor: pointer; /* Indique un clic possible */
+}
+
+
+
+.collapse-logement .collapse-icon {
+  font-size: 14px;
+  margin-left: 10px; /* Espacement entre le titre et l'icône */
+  transition: transform 0.3s ease; /* Animation fluide */
+}
+
+.collapse-logement .collapse-icon.rotate {
+  transform: rotate(180deg); /* Rotation lorsque ouvert */
+}
+
+/* Contenu des collapsibles */
+.collapse-logement .collapse-content {
+ 
+  max-height: 0; /* Contenu masqué par défaut */
+  opacity: 0; /* Transparent par défaut */
+  overflow: hidden; /* Cache tout débordement */
+  transition: max-height 0.3s ease, opacity 0.3s ease; /* Animation fluide */
+}
+
+.collapse-logement .collapse-content.open {
+  max-height: 150px; /* Ajuste la hauteur maximale */
+  opacity: 1; /* Rend le contenu visible */
+}
+
+.collapse-logement ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Supprime les puces des listes */
+}
+
+.collapse-logement li {
+  margin-bottom: 5px; /* Espacement réduit */
+  font-size: 14px;
+}
+
+.collapse-logement p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 767.98px) {
+  .collapse_column {
+    flex-direction: column; /* Les collapsibles s'empilent verticalement */
+    gap: 10px; /* Espacement réduit entre les éléments empilés */
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -133,7 +215,35 @@
   }
 
   .collapse_column {
-    flex-direction: column;
-    gap: 0;
+    margin-left: 50px;
   }
+  .logement {
+    width: 335px;
+  }
+  .titreP1 {
+    margin-left: 70px;
+    width: 336px;
+  }
+  .titreP1 p {
+    
+
+  }
+.titreP1 .location {
+  font-size: 14px;
+}
+.tags-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.tags {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.rating {
+  
+}
+.host-info {
+  
+}
 }

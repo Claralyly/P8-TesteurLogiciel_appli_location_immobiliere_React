@@ -34,33 +34,49 @@ function Logement() {
   }
 
   return (
-    <div className="content">
+    <div className="logement">
+      {/* Carrousel des images */}
       {logement.pictures && <Slideshow images={logement.pictures} />}
-      <div className="titre">
-        <div className="titreP1">
-          <div>
-            <p>{logement.title}</p>
-            <p className="location">{logement.location}</p>
-          </div>
-          <div className="host-info">
-            <p>{logement.host.name}</p>
-            <img src={logement.host.picture} alt={`${logement.host.name}`} />
-          </div>
-        </div>
+      
+      {/* Section du titre et informations de l'hôte */}
+      
+      <section className="fiche-logement">
+
+  {/* Section du titre et informations de l'hôte */}
+  <div className="titre">
+    <div className="titreP1">
+        <p>{logement.title}</p>
+        <p className="location">{logement.location}</p>
       </div>
       <div className="tags-rating">
         <div className="tags">
-          {logement.tags.map(tag => (
+          {logement.tags?.map(tag => (
             <span key={tag} className="tag">{tag}</span>
           ))}
         </div>
-        <div className="rating">
-          {Array.from({ length: 5 }, (v, i) => (
-            <span key={i} className={i < logement.rating ? 'star filled' : 'star'}>★</span>
-          ))}
-        </div>
-      </div>
-      <div className="details">
+     
+    </div>
+  </div>
+
+  {/* Photo et notation */}
+  <div className="rating">
+    <div className="host-info">
+      <p>{logement.host.name}</p>
+      <img src={logement.host.picture} alt={`Photo de l’hôte ${logement.host.name}`} />
+    </div>
+    <div className="rating-star">
+      {Array.from({ length: 5 }, (_, i) => (
+        <span key={i} className={i < logement.rating ? 'star filled' : 'star'}>★</span>
+      ))}
+    </div>
+  </div>
+
+</section>
+
+      
+
+      {/* Section des collapsibles */}
+      <div className="collapse_column">
         <Collapse title="Description" className="collapse-logement">
           <p>{logement.description}</p>
         </Collapse>
@@ -77,3 +93,4 @@ function Logement() {
 }
 
 export default Logement;
+

@@ -1,63 +1,62 @@
 .slideshow {
   position: relative;
-  
   margin-top: 60px;
 }
 
 .slideshow img {
-  
   border-radius: 25px;
   width: 1240px;
   height: 415px;
   object-fit: cover;
 }
 
+/* Chevrons avec icônes Font Awesome */
 .slideshow .prev, .slideshow .next {
   position: absolute;
   top: 50%;
-  width: 96px; /* Largeur de la flèche */
-  height: 119px; /* Hauteur de la flèche */
-  padding: 0; 
-  margin-top: -59.5px; /* Ajuster pour centrer verticalement */
-  color: white; 
-  font-weight: bold;
-  font-size: 48px; /* Taille de la police ajustée pour être bien visible */
-  border: none; 
-  user-select: none;
-  background-color: transparent; 
-  outline: none;
-  cursor: pointer; 
-  z-index: 1; /* Assurer que les flèches sont au-dessus de l'image */
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
+  transform: translateY(-50%);
+  color: white;
+  font-size: 80px; /* Taille ajustée des chevrons */
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
 }
 
 .slideshow .next {
-  right: 10px; /* Ajuster la position de la flèche droite */
+  right: 20px; /* Position à droite */
 }
 
 .slideshow .prev {
-  left: 10px; /* Ajuster la position de la flèche gauche */
+  left: 20px; /* Position à gauche */
+  
+}
+/* Supprime le comportement par défaut lié aux boutons */
+.slideshow button:focus {
+  outline: none; /* Supprime le focus et tout contour */
+  box-shadow: none; /* Élimine tout effet d'ombre au clic */
 }
 
+/* Pagination */
 .pagination-container {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: auto;
-  height: 32px;
   color: white;
-  padding: 5px 10px;
   font-size: 18px;
-  text-align: center; 
-  line-height: 32px; 
+  text-align: center;
 }
+/* Responsive Design */
+@media (max-width: 767.98px) {
+  .slideshow img {
+    width: 335px;
+    height: 255px;
+    margin-left: 60px;
+  }
+ 
 
-.dots, .dot {
-  display: none;
+  
 }
-
 
 
