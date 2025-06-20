@@ -1,17 +1,12 @@
-.logement {
-  padding: 20px;
-  width: 1440px;
-  height: auto;
-  margin: auto;
-}
+
 .fiche-logement{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .titre {
   font-family: 'Arial', sans-serif;
-  width: 60%;
+  
 }
 
 .titreP1 {
