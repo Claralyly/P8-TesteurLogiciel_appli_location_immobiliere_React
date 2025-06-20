@@ -1,4 +1,7 @@
-
+.logement {
+  width: 1240px;
+  margin-left: 100px;
+}
 .fiche-logement{
   display: flex;
   justify-content: space-between;
@@ -211,9 +214,7 @@
 
  
 .tags-rating {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+ 
 }
 .tags {
   margin-top: 20px;

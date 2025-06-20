@@ -9,6 +9,8 @@
   width: 100%;
   height: 100%;
   border-radius: 50px;
+  object-fit: cover;
+  
   
 }
 
@@ -36,6 +38,7 @@
   .banner {
     height: 111px;
     width: 335px;
+    margin-left: 50px;
     
     
   }

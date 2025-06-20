@@ -58,9 +58,10 @@ nav a:hover::after {
 
 @media screen and (max-width: 768px) {
   .header {
-    width: 375px;
-    height: 46px;
-    margin-left: 40px;
+    display: flex;
+        justify-content: flex-start;
+    
+    
     
   }
   .logo {
