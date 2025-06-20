@@ -210,8 +210,6 @@
   }
 
  
-  
-
 .tags-rating {
   display: flex;
   flex-direction: column;
@@ -221,9 +219,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.tag{
 
-}
 .rating {
   display: flex;
   flex-direction: row-reverse;
@@ -234,5 +230,14 @@
 }
 .rating-star{
   width: 98px;
+  margin-right: 25px;
+}
+.collapse-logement .collapse-header {
+  width: 335px;
+  height: 52px; /* Alignement avec hauteur mobile */
+}
+.collapse-logement .collapse-content.open {
+  width: 335px;
+  
 }
 }

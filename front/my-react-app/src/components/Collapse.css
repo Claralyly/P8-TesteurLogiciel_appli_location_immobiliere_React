@@ -126,9 +126,7 @@ div .collapse-content.open p {
 
 /* Media Queries pour les écrans plus petits */
 @media (max-width: 768px) {
-  div .collapse {
-    width: 335px;
-  }
+  
 
   div .collapse-header {
     width: 335px;
@@ -152,10 +150,7 @@ div .collapse-content.open p {
     height: 52px; /* Alignement avec hauteur mobile */
   }
 
-  .collapse-logement .collapse-header {
-    width: 335px;
-    height: 52px; /* Alignement avec hauteur mobile */
-  }
+  
   
 }
 
