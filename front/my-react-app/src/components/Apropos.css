@@ -15,17 +15,15 @@
 /* Media Queries pour les écrans plus petits */
 @media screen and (max-width: 768px) {
   
-  .aporpos {
+  .apropos {
     width: 335px;
   }
-  .valeur {
-    width: 335px;
-    
-  }
+ 
+  
   .banner2 {
     height: 111px;
     width: 335px;
-    margin-left: 100px;
+    margin-left: 40px;
   }
 
   .card-image { 

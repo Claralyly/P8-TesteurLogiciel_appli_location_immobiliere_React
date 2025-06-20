@@ -183,7 +183,7 @@
 @media (max-width: 767.98px) {
   .logement{
     width: 335px;
-    margin-left: 20px;
+    margin-left: 50px;
   }
  
   .slideshow img {
@@ -197,7 +197,15 @@
   .collapse_column {
     flex-direction: column; /* Les collapsibles s'empilent verticalement */
     gap: 10px; /* Espacement réduit entre les éléments empilés */
+    width: 335px;
   }
+  .collapse-header .h2 {
+
+  }
+  .collapse-logement .collapse-header::after {
+     margin-left: 0px;
+  }
+ 
   .titreP1 p{
     font-size: 18px;
   }
