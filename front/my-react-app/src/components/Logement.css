@@ -118,11 +118,11 @@
 /* Conteneur principal des collapsibles */
 .collapse_column {
   display: flex; /* Alignement horizontal */
-  flex-direction: row;
+  
   gap: 20px; /* Espacement entre les collapsibles */
   margin-top: 20px; /* Espacement avec le reste */
   width: 1240px;
-  margin-left: 100px;
+  
 }
 
 /* Style des collapsibles */
@@ -136,17 +136,7 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
 
-.collapse-logement .collapse-header {
-  display: flex; /* Utilisation de Flexbox pour le centrage */
-  justify-content: center; /* Centrer le titre et l'icône horizontalement */
-  align-items: center; /* Centrer verticalement */
-  background-color: #ff6060; /* Couleur rouge de l'en-tête */
-  color: white;
-  padding: 0 15px; /* Espacement latéral */
-  font-size: 16px; /* Taille adaptée */
-  height: 52px; /* Hauteur fixée selon la maquette */
-  cursor: pointer; /* Indique un clic possible */
-}
+
 
 
 
@@ -194,7 +184,7 @@
 
 @media (max-width: 767.98px) {
   .logement{
-    width: 513px;
+    width: 335px;
   }
  
   .slideshow img {
@@ -236,9 +226,13 @@
 }
 .rating {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
+  width: 335px;
 }
 .host-info {
-  
+  width: 135px;
+}
+.rating-star{
+  width: 98px;
 }
 }
