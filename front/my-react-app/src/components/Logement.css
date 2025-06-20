@@ -196,19 +196,21 @@
   .logement{
     width: 513px;
   }
+ 
   .slideshow img {
     width: 335px;
     height: 255px;
     border-radius: 0px;
+  }
+  .titre{
+    width: 335px;
   }
   .collapse_column {
     flex-direction: column; /* Les collapsibles s'empilent verticalement */
     gap: 10px; /* Espacement réduit entre les éléments empilés */
   }
 
-  .description_column {
-    flex-direction: column;
-  }
+  
 
   .description_host {
     display: flex;
@@ -217,14 +219,7 @@
     align-items: center;
   }
 
-  .collapse_column {
-    margin-left: 50px;
-  }
  
-  .titreP1 {
-   
-    width: 336px;
-  }
   
 
 .tags-rating {
@@ -235,6 +230,9 @@
 .tags {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.tag{
+
 }
 .rating {
   display: flex;
