@@ -180,6 +180,7 @@
 @media (max-width: 767.98px) {
   .logement{
     width: 335px;
+    margin-left: 20px;
   }
  
   .slideshow img {
@@ -194,8 +195,12 @@
     flex-direction: column; /* Les collapsibles s'empilent verticalement */
     gap: 10px; /* Espacement réduit entre les éléments empilés */
   }
-
-  
+  .titreP1 p{
+    font-size: 18px;
+  }
+  .p .location{
+    font-size: 14px;
+  }
 
   .description_host {
     display: flex;
@@ -227,9 +232,12 @@
   width: 98px;
   margin-right: 25px;
 }
+.collapse .collapse-logement{
+  width: 335px;
+}
 .collapse-logement .collapse-header {
   width: 335px;
-  height: 52px; /* Alignement avec hauteur mobile */
+  
 }
 .collapse-logement .collapse-content.open {
   width: 335px;

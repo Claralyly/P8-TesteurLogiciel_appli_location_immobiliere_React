@@ -48,8 +48,7 @@ body {
 @media screen and (max-width: 768px) {
   .footer {
     width: 375px;
-    height: 209px; 
-   margin-left: 20px;
+   
   }
   
   .footer img {

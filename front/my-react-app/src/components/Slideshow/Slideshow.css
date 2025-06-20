@@ -16,11 +16,11 @@
   top: 50%;
   transform: translateY(-50%);
   color: white;
-  font-size: 80px; /* Taille ajustée des chevrons */
+  font-size: 46px; /* Taille ajustée des chevrons */
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 10;
+  
 }
 
 .slideshow .next {
