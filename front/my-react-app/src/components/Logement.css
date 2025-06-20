@@ -191,17 +191,21 @@
 }
 
 /* Responsive Design */
-.logement{
-  width: 513px;
-}
+
 @media (max-width: 767.98px) {
+  .logement{
+    width: 513px;
+  }
+  .slideshow img {
+    width: 335px;
+    height: 255px;
+    border-radius: 0px;
+  }
   .collapse_column {
     flex-direction: column; /* Les collapsibles s'empilent verticalement */
     gap: 10px; /* Espacement réduit entre les éléments empilés */
   }
-}
 
-@media (max-width: 767.98px) {
   .description_column {
     flex-direction: column;
   }
@@ -218,7 +222,7 @@
   }
  
   .titreP1 {
-    margin-left: 70px;
+   
     width: 336px;
   }
   
