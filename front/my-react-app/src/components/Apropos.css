@@ -1,4 +1,9 @@
 /* Styles par défaut (Desktop) */
+.apropos {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .banner2 {
   position: relative;
   width: 1240px;
@@ -30,9 +35,14 @@
 @media screen and (max-width: 768px) {
   
   .apropos {
-    width: 335px;
-  }
- 
+    width: 100%;
+    max-width: 335px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
   
   .banner2 {
     height: 111px;
@@ -43,29 +53,38 @@
   .card-image { 
     border-radius: 25px; 
   }
-  .collapse-apropos .collapse-header,
-  .collapse-apropos .collapse-content,
-  .collapse-apropos .collapse-content.open {
-    max-width: 335px;
-    width: 100%;
+  
+  .collapse-apropos .collapse-header {
+    width: 335px;
+    height: 30px;
+    padding: 0 12px;
+    border-radius: 10px;
+    font-size: 13px;
     margin: 0 auto;
-    box-sizing: border-box;
-  }
-
-  .collapse-apropos .collapse-content {
-    padding: 10px 15px;
-    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .collapse-apropos .collapse-header h2 {
-    font-size: 16px;
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .collapse-apropos .collapse-content {
+    width: 335px;
+    padding: 10px 12px;
+    font-size: 12px;
+    line-height: 1.4;
+    border-radius: 0 0 10px 10px;
+    margin: -1px auto 0 auto;
   }
 
   .valeur {
-    padding: 0;
-    margin: 20px auto;
-    width: 335px;
+    width: 100%;
+    max-width: 335px;
+    margin: 15px auto 30px auto;
+    gap: 12px;
   }
 }
 
-}
