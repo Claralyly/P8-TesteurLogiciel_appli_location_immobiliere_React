@@ -1,6 +1,8 @@
 .slideshow {
   position: relative;
   margin-top: 60px;
+  display: flex;
+  justify-content: center;
 }
 
 .slideshow img {
@@ -8,33 +10,37 @@
   width: 1240px;
   height: 415px;
   object-fit: cover;
+  z-index: 1;
 }
 
-/* Chevrons avec icônes Font Awesome */
-.slideshow .prev, .slideshow .next {
+/* Flèches simples */
+.slideshow .prev,
+.slideshow .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: white;
-  font-size: 46px; /* Taille ajustée des chevrons */
+  font-size: 60px;
   background: none;
   border: none;
   cursor: pointer;
-  
+  z-index: 2;
+  padding: 0;
+}
+
+/* Collées vers les  bords de la photo */
+.slideshow .prev {
+  left: 20px;
 }
 
 .slideshow .next {
-  right: 20px; /* Position à droite */
+  right: 20px;
 }
 
-.slideshow .prev {
-  left: 20px; /* Position à gauche */
-  
-}
-/* Supprime le comportement par défaut lié aux boutons */
+/* Supprime le contour par défaut */
 .slideshow button:focus {
-  outline: none; /* Supprime le focus et tout contour */
-  box-shadow: none; /* Élimine tout effet d'ombre au clic */
+  outline: none;
+  box-shadow: none;
 }
 
 /* Pagination */
@@ -46,13 +52,18 @@
   color: white;
   font-size: 18px;
   text-align: center;
+  z-index: 3;
 }
+
 /* Responsive Design */
 @media (max-width: 767.98px) {
-  
- 
+  .slideshow img {
+    width: 100%;
+    height: auto;
+  }
 
-  
+  .slideshow .prev,
+  .slideshow .next {
+    font-size: 24px;
+  }
 }
-
-
