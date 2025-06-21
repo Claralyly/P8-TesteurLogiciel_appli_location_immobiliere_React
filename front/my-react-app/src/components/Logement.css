@@ -95,6 +95,7 @@
   color: #ff6060;
 }
 
+
 .description_column {
   display: flex;
   flex-direction: row;
@@ -113,63 +114,56 @@
   color: black;
 }
 
-/* Conteneur principal des collapsibles */
+/* ... jusqu’à ... */
 .collapse_column {
-  display: flex; /* Alignement horizontal */
-  
-  gap: 20px; /* Espacement entre les collapsibles */
-  margin-top: 20px; /* Espacement avec le reste */
-  width: 1240px;
-  
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 25px;
 }
-
-/* Style des collapsibles */
-.collapse-logement {
-  flex: 1;
-  border: 1px solid #ddd; /* Bordure légère et épurée */
-  border-radius: 5px; /* Coins arrondis selon la maquette */
-  background-color: #fff;
-  overflow: hidden;
-  height: auto; /* Ajuste la hauteur selon l'état */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
-}
-
-
-
-
-
-.collapse-logement .collapse-icon {
-  font-size: 14px;
-  margin-left: 10px; /* Espacement entre le titre et l'icône */
-  transition: transform 0.3s ease; /* Animation fluide */
-}
-
 .collapse-logement .collapse-icon.rotate {
-  transform: rotate(180deg); /* Rotation lorsque ouvert */
+  transform: rotate(180deg);
 }
 
-/* Contenu des collapsibles */
+/*Contenu des collapsibles — correction appliquée ici */
 .collapse-logement .collapse-content {
- 
-  max-height: 0; /* Contenu masqué par défaut */
-  opacity: 0; /* Transparent par défaut */
-  overflow: hidden; /* Cache tout débordement */
-  transition: max-height 0.3s ease, opacity 0.3s ease; /* Animation fluide */
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  padding: 0;
+  margin: 0;
 }
 
 .collapse-logement .collapse-content.open {
-  max-height: 150px; /* Ajuste la hauteur maximale */
-  opacity: 1; /* Rend le contenu visible */
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+  padding: 10px 15px;
+  margin-top: 0; 
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
 }
 
+
+
+/*Liste et texte dans le collapse (inchangé) */
 .collapse-logement ul {
   padding: 0;
   margin: 0;
-  list-style: none; /* Supprime les puces des listes */
+  list-style: none;
 }
 
 .collapse-logement li {
-  margin-bottom: 5px; /* Espacement réduit */
+  margin-bottom: 5px;
   font-size: 14px;
 }
 
@@ -177,7 +171,6 @@
   font-size: 14px;
   margin: 0;
 }
-
 /* Responsive Design */
 
 @media (max-width: 767.98px) {
@@ -195,15 +188,15 @@
     width: 335px;
   }
   .collapse_column {
-    flex-direction: column; /* Les collapsibles s'empilent verticalement */
-    gap: 10px; /* Espacement réduit entre les éléments empilés */
+    flex-direction: column;
+    gap: 10px;
     width: 335px;
   }
-  .collapse-header .h2 {
-
+  .collapse-logement .collapse-header {
+    width: 335px;
   }
-  .collapse-logement .collapse-header::after {
-     margin-left: 0px;
+  .collapse-logement .collapse-content.open {
+    width: 335px;
   }
  
   .titreP1 p{
@@ -220,36 +213,81 @@
     align-items: center;
   }
 
- 
-.tags-rating {
- 
-}
+
 .tags {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+.tag {
+  font-size: 10px;
+  border-radius: 5px;
+  padding: 4px 15px;
 }
 
 .rating {
-  display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
   width: 335px;
+  gap: 10px;
 }
+
 .host-info {
-  width: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  max-width: 130px;
 }
-.rating-star{
-  width: 98px;
-  margin-right: 25px;
+
+.host-info p {
+  font-size: 12px;
+  width: 55px;
+  text-align: right;
+  color: #ff6060;
+  margin: 0;
 }
-.collapse .collapse-logement{
-  width: 335px;
+
+.host-info img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
 }
+
+.rating-star {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 15px;
+  gap: 4px;
+  margin: 0;
+}
+
+.star {
+  font-size: inherit;
+  color: #bbb;
+}
+
+.star.filled {
+  color: #ff6060;
+}
+
 .collapse-logement .collapse-header {
-  width: 335px;
-  
+  height: 40px;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 0 15px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
+
 .collapse-logement .collapse-content.open {
-  width: 335px;
-  
+  border-radius: 0 0 10px 10px;
+  padding: 10px 15px;
+  font-size: 13px;
 }
+
+
+
 }

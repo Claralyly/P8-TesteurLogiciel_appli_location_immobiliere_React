@@ -66,4 +66,7 @@
   .slideshow .next {
     font-size: 24px;
   }
+  .pagination-container {
+    font-size: 14px;
+  }
 }

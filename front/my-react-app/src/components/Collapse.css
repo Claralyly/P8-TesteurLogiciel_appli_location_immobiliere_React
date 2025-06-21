@@ -56,7 +56,7 @@
 }
 
 .collapse-logement .collapse-header::after {
-  content: '\f0d7'; /* Chevron vers le bas de Font Awesome */
+  content: '\f077'; /* Chevron vers le bas de Font Awesome */
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   font-size: 18px;

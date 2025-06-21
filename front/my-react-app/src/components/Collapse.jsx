@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Collapse.css';
 
-function Collapse({ title, children, className }) {
+function Collapse({ title, children, className = '' }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
@@ -10,16 +10,23 @@ function Collapse({ title, children, className }) {
 
   return (
     <div className={`collapse ${className}`}>
-      <div className={`collapse-header ${isOpen ? 'open' : ''}`} onClick={toggleCollapse}>
-        <i className={`fas ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+      <div
+        className={`collapse-header ${isOpen ? 'open' : ''}`}
+        onClick={toggleCollapse}
+      >
         <h2>{title}</h2>
+        {/* L'icône est ajoutée automatiquement avec ::after dans ton CSS */}
       </div>
-      {isOpen && <div className="collapse-content open">{children}</div>}
+
+      <div className={`collapse-content ${isOpen ? 'open' : 'close'}`}>
+        {children}
+      </div>
     </div>
   );
 }
 
 export default Collapse;
+
 
 
 

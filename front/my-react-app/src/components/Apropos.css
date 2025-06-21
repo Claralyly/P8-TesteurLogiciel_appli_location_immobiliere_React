@@ -11,6 +11,20 @@
   border-radius: 50px;
   object-fit: cover;
 }
+.collapse-apropos .collapse-header::after {
+  content: '\f077'; /* chevron vers le haut (fermé par défaut) */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 18px;
+  color: white;
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.collapse-apropos .collapse-header.open::after {
+  transform: rotate(180deg); /* chevron vers le bas quand ouvert */
+}
+
 
 /* Media Queries pour les écrans plus petits */
 @media screen and (max-width: 768px) {
@@ -29,6 +43,29 @@
   .card-image { 
     border-radius: 25px; 
   }
-  
+  .collapse-apropos .collapse-header,
+  .collapse-apropos .collapse-content,
+  .collapse-apropos .collapse-content.open {
+    max-width: 335px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .collapse-apropos .collapse-content {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .collapse-apropos .collapse-header h2 {
+    font-size: 16px;
+  }
+
+  .valeur {
+    padding: 0;
+    margin: 20px auto;
+    width: 335px;
+  }
+}
 
 }
