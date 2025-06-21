@@ -1,4 +1,5 @@
 /* Styles par défaut (Desktop) */
+
 .apropos {
   display: flex;
     flex-direction: column;
@@ -33,26 +34,23 @@
 
 /* Media Queries pour les écrans plus petits */
 @media screen and (max-width: 768px) {
+  .main-content {
+    display: flex
+      justify-content: center;
+  }
   
-  .apropos {
-    width: 100%;
-    max-width: 335px;
-    padding: 0 15px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- }
   
   .banner2 {
     height: 111px;
     width: 335px;
-    margin-left: 40px;
+    
   }
 
   .card-image { 
-    border-radius: 25px; 
+    border-radius: 10px; 
   }
+  .overlay {
+    border-radius: 10px;
   
   .collapse-apropos .collapse-header {
     width: 335px;
@@ -80,11 +78,6 @@
     margin: -1px auto 0 auto;
   }
 
-  .valeur {
-    width: 100%;
-    max-width: 335px;
-    margin: 15px auto 30px auto;
-    gap: 12px;
-  }
+  
 }
 

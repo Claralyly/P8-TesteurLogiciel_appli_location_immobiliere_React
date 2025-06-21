@@ -43,13 +43,10 @@
     
   }
   .banner-image { 
-    border-radius: 25px; 
+    border-radius: 10px; 
     
   }
-  .overlay { 
-    border-radius: 25px; 
-    
-  }
+  
   .overlay h1 { width: 100%;  
     font-size: 18px; 
     height: auto; 
