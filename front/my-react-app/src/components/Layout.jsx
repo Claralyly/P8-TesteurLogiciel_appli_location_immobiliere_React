@@ -1,12 +1,12 @@
 import React from 'react';
 import './Layout.css';
-import Header from './Header';
+import Header from './Header'; // on importe le header ici
 import Kasafooter from '../assets/Kasafooter.png';
 
 function Layout({ children }) {
   return (
     <div>
-      {/* Tu peux ajouter ton Header ici si besoin */}
+      <Header /> {/*le header est géré ici */}
       <main className="main-content">
         {children}
       </main>

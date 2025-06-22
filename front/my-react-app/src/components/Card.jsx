@@ -3,12 +3,18 @@ import { Link } from 'react-router-dom';
 import './Card.css';
 
 function Card({ id, title, image }) {
-  console.log(`Rendering Card - ID: ${id}, Title: ${title}, Image URL: ${image}`); // Vérification en console
-
   return (
-    <Link to={`/logement/${id}`} className="card-link">
+    <Link 
+      to={`/logement/${id}`} 
+      className="card-link"
+      aria-label={`Voir le logement ${title}`}
+    >
       <div className="card">
-        <img src={image} alt={`Image de ${title}`} className="card-image" />
+        <img 
+          src={image} 
+          alt={`Image de ${title}`} 
+          className="card-image" 
+        />
         <h2>{title}</h2>
       </div>
     </Link>
@@ -16,6 +22,8 @@ function Card({ id, title, image }) {
 }
 
 export default Card;
+
+
 
 
 

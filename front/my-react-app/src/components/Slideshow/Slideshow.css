@@ -1,6 +1,6 @@
 .slideshow {
   position: relative;
-  margin-top: 60px;
+  
   display: flex;
   justify-content: center;
 }
@@ -60,6 +60,7 @@
   .slideshow img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
   }
 
   .slideshow .prev,

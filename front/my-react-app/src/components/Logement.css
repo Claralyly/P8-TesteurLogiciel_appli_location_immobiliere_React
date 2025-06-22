@@ -1,3 +1,4 @@
+
 .logement {
   width: 1240px;
   margin-left: 100px;
@@ -6,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 .titre {
   font-family: 'Arial', sans-serif;
@@ -118,7 +120,10 @@
 @media (max-width: 767.98px) {
   .logement{
     width: 335px;
-    margin-left: 50px;
+    margin-left: 20px;
+  }
+  .fiche-logement{
+    margin-top: 10px;
   }
  
   .slideshow img {

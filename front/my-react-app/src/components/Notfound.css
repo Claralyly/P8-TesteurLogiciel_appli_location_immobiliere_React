@@ -1,23 +1,18 @@
 .not-found {
   text-align: center;
   color: #FF6060;
-  padding: 20px; 
-}
-
-.error {
-  margin-top: 50px;
+  padding: 60px 20px;
 }
 
 .error h1 {
   font-size: 200px;
   margin: 0;
-  
 }
 
 .error h2 {
   font-size: 36px;
-  margin: 10px 0;
-  font-weight: normal; 
+  margin: 40px 0;
+  font-weight: normal;
 }
 
 .back-home {
@@ -25,42 +20,42 @@
   text-decoration: underline;
   cursor: pointer;
   font-size: 18px;
-  margin: 50px 0;
-  font-weight: normal; 
+  margin-top: 30px;
+  font-weight: normal;
 }
 
 .back-home:hover {
   color: black;
-  text-decoration: underline;
+}
+.not-found {
+  min-height: 60vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer{
+  width: 1440px;
 }
 
-/* Media Queries pour les écrans plus petits */
+/* Mobile */
 @media screen and (max-width: 768px) {
   .not-found {
-    padding: 10px; 
-  }
-
-  .error {
-    margin-top: 30px;
+    padding: 40px 10px;
   }
 
   .error h1 {
-    margin-bottom: 113px;
-    font-size: 120px; 
-    width: 198px;
-    margin-left: 80px;
-    margin-top: 80px;
+    font-size: 120px;
   }
 
   .error h2 {
-    margin-bottom: 100px;
-    font-size: 24px;
-    width: 375px;
-    font-weight: normal; 
+    font-size: 20px;
+    margin: 30px 0;
   }
 
   .back-home {
-    font-size: 16px; 
-    font-weight: normal; 
+    font-size: 16px;
+  }
+  .footer{
+    width: 375px;
   }
 }
