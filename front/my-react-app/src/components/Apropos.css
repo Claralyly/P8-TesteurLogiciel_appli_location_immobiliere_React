@@ -1,40 +1,6 @@
-/* Styles par défaut (Desktop) */
-
 .apropos {
   display: flex;
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
-.banner2 {
-  position: relative;
-  width: 1240px;
-  height: 233px;
-}
-
-.card-image {
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-  object-fit: cover;
-}
-
-
-
-@media screen and (max-width: 768px) {
-  
-
-  .banner2 {
-    height: 111px;
-    width: 335px;
-  }
-
-  .card-image,
-  .overlay {
-    border-radius: 10px;
-  }
-  
-
-  
-}
-
 

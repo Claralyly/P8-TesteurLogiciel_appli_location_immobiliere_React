@@ -3,6 +3,7 @@ import './Accueil.css';
 import Banner from './Banner';
 import Card from './Card';
 import useFetchProperties from '../hooks/useFetchProperties';
+import imageAccueil from '../assets/image1.jpg';
 
 function Accueil() {
   const { properties, loading } = useFetchProperties();
@@ -13,7 +14,7 @@ function Accueil() {
 
   return (
     <div className="home">
-      <Banner />
+      <Banner image={imageAccueil} showText={true} />
       <div className="cards-wrapper">
         <div className="cards-container">
           {properties.map(property => (
@@ -21,7 +22,7 @@ function Accueil() {
               key={property.id} 
               id={property.id} 
               title={property.title}
-              image={property.cover} // Utilisation de la photo de couverture
+              image={property.cover}
             />
           ))}
         </div>
@@ -31,6 +32,7 @@ function Accueil() {
 }
 
 export default Accueil;
+
 
 
 
