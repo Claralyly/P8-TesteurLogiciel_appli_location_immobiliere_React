@@ -17,67 +17,24 @@
   border-radius: 50px;
   object-fit: cover;
 }
-.collapse-apropos .collapse-header::after {
-  content: '\f077'; /* chevron vers le haut (fermé par défaut) */
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  font-size: 18px;
-  color: white;
-  margin-left: auto;
-  transition: transform 0.3s ease;
-}
-
-.collapse-apropos .collapse-header.open::after {
-  transform: rotate(180deg); /* chevron vers le bas quand ouvert */
-}
 
 
-/* Media Queries pour les écrans plus petits */
+
 @media screen and (max-width: 768px) {
-  .main-content {
-    display: flex
-      justify-content: center;
-  }
   
-  
+
   .banner2 {
     height: 111px;
     width: 335px;
-    
   }
 
-  .card-image { 
-    border-radius: 10px; 
-  }
+  .card-image,
   .overlay {
     border-radius: 10px;
+  }
   
-  .collapse-apropos .collapse-header {
-    width: 335px;
-    height: 30px;
-    padding: 0 12px;
-    border-radius: 10px;
-    font-size: 13px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .collapse-apropos .collapse-header h2 {
-    font-size: 13px;
-    margin: 0;
-  }
-
-  .collapse-apropos .collapse-content {
-    width: 335px;
-    padding: 10px 12px;
-    font-size: 12px;
-    line-height: 1.4;
-    border-radius: 0 0 10px 10px;
-    margin: -1px auto 0 auto;
-  }
 
   
 }
+
 

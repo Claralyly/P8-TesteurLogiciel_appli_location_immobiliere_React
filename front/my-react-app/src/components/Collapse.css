@@ -1,4 +1,12 @@
-/* Style générique pour le Collapse */
+/* ========== STYLES GÉNÉRIQUES COLLAPSE ========== */
+.collapse-header {
+  
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  background-color: #FF6060;
+}
+
 .collapse-header h2 {
   margin: 0;
   font-size: 18px;
@@ -7,84 +15,21 @@
 
 .collapse-header i {
   margin-right: 10px;
-  order: -1; /* Assurer que le chevron apparaît avant le texte */
+  order: -1;
 }
 
-/* Supprimer les chevrons de droite */
 .collapse-header .fa-chevron-up,
 .collapse-header .fa-chevron-down {
   display: none;
 }
 
-.collapse-content.open {
-  display: block;
-  margin: 0;
-}
-
-.collapse-header {
-  color: white;
-  justify-content: flex-start;
-}
-
-/* Styles spécifiques pour la page Logement */
-.details {
-  margin: 20px 0;
-  width: 1240px;
-  display: flex;
-  flex-direction: row;
-  gap: 70px;
-}
-
-.collapse-logement .collapse-header {
-  background-color: #FF6060;
-  justify-content: flex-start;
-  width: 582px;
-  height: 52px; /* Correction : hauteur alignée à la maquette */
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  padding: 0 15px; /* Ajout de marges pour le contenu */
-}
-
-.collapse-logement .collapse-content {
-  padding: 10px 15px; /* Ajout de marges pour le contenu */
-  background: #f6f6f6; /* Couleur de fond gris clair */
-  display: none;
-  border: 1px solid #ddd;
-  border-top: none;
-  width: 582px; /* Limite la largeur à 582px */
-}
-
-.collapse-logement .collapse-header::after {
-  content: '\f077'; /* Chevron vers le bas de Font Awesome */
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  font-size: 18px;
-  transition: transform 0.3s ease;
-  margin-left: auto; /* Assurer que le chevron reste à droite */
-}
-
-.collapse-logement .collapse-header.open::after {
+.collapse-header.open::after {
   transform: rotate(180deg);
 }
 
-/* Styles spécifiques pour la page Apropos */
-.collapse-apropos .collapse-header {
-  background-color: #FF6060;
-  border-radius: 5px;
-  width: 1023px;
-  height: 52px; /* Alignement de la hauteur */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  cursor: pointer;
-  position: relative;
-}
-
-.valeur {
-  margin-top: 30px;
-  
+.collapse-content.open {
+  display: block;
+  margin: 0;
 }
 
 div .collapse {
@@ -93,7 +38,7 @@ div .collapse {
 }
 
 div .collapse-header::after {
-  content: '\f0d7'; /* Chevron vers le bas de Font Awesome */
+  content: '\f0d7';
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   font-size: 18px;
@@ -111,40 +56,185 @@ div .collapse-content.open {
   background-color: #F6F6F6;
 }
 
-div .collapse-header.open::after {
-  transform: rotate(180deg);
-}
-
 div .collapse-content.open p {
   text-align: left;
 }
 
+/* ========== PAGE A PROPOS  ========== */
+.valeur{
+  margin-top: 30px;
+}
+.collapse-apropos .collapse-header {
+  width: 1023px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  
+  border-radius: 5px;
+  height: 52px;
+  justify-content: space-between;
+  padding: 0 20px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.collapse-apropos .collapse-header::after {
+  content: '\f077'; /* chevron fermé */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 18px;
+  color: white;
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.collapse-apropos .collapse-header.open::after {
+  transform: rotate(180deg); /* chevron ouvert */
+}
+
+.collapse-apropos .collapse-content.open {
+  width: 1023px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+
+/* ========== PAGE LOGEMENT ========== */
+/* ========== CONTAINER DÉTAILS ET COLONNES ========== */
+.details {
+  margin: 20px 0;
+  width: 1240px;
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+}
+
+.collapse_column {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+/* ========== COLLAPSE HEADER (Logement) ========== */
+.collapse-logement .collapse-header {
+ 
+  color: white;
+  justify-content: flex-start;
+  width: 582px;
+  height: 52px;
+  padding: 0 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.collapse-logement .collapse-header::after {
+  content: '\f077';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+  margin-left: auto;
+}
+
+.collapse-logement .collapse-header.open::after {
+  transform: rotate(180deg);
+}
+
+/* ========== COLLAPSE CONTENT (Logement) ========== */
+.collapse-logement .collapse-content {
+  width: 582px;
+  padding: 10px 15px;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  display: none;
+}
+
+.collapse-logement .collapse-content.open {
+  display: block;
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0;
+}
+
+/* ========== CONTENU TEXTE ET LISTES ========== */
+.collapse-logement ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.collapse-logement li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.collapse-logement p {
+  font-size: 14px;
+  margin: 0;
+}
+
+
 /* Media Queries pour les écrans plus petits */
 @media (max-width: 768px) {
-  
-
-  div .collapse-header {
-    width: 335px;
-    height: 52px; /* Correction pour hauteur mobile */
-    padding: 10px;
-    font-size: 16px;
-  }
-
-  div .collapse-header h2 {
-    font-size: 16px;
-  }
+  /* Général*/
 
   div .collapse-content {
-    width: 335px; /* Ajustement de la largeur pour correspondre à l'en-tête */
+    width: 335px; 
     padding: 10px;
     font-size: 14px;
+    
+  }
+  
+  
+  div .collapse-header h2 {
+    font-size: 16px;
+    
   }
 
-  .collapse-apropos .collapse-header {
+  /* A propos */
+
+  .collapse-apropos .collapse-header,
+  .collapse-apropos .collapse-content {
     width: 335px;
-    height: 52px; /* Alignement avec hauteur mobile */
+    max-width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .collapse-apropos .collapse-header,
+  .collapse-apropos .collapse-content.open {
+    width: 335px !important;
+    max-width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 
+   /* Logement */
+
+  .collapse-logement .collapse-header {
+    width: 335px;
+    height: 40px;
+    
+    
+  }
+  .collapse-logement .collapse-content.open {
+    width: 335px;
+    
+  }
   
   
 }

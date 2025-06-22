@@ -113,64 +113,6 @@
   margin: 5px 0;
   color: black;
 }
-
-/* ... jusqu’à ... */
-.collapse_column {
-  display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 25px;
-}
-.collapse-logement .collapse-icon.rotate {
-  transform: rotate(180deg);
-}
-
-/*Contenu des collapsibles — correction appliquée ici */
-.collapse-logement .collapse-content {
-  background-color: #f6f6f6;
-  border: 1px solid #ddd;
-  border-top: none;
-  border-radius: 0 0 5px 5px;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
-  padding: 0;
-  margin: 0;
-}
-
-.collapse-logement .collapse-content.open {
-  max-height: 500px;
-  opacity: 1;
-  visibility: visible;
-  padding: 10px 15px;
-  margin-top: 0; 
-  background-color: #f6f6f6;
-  border: 1px solid #ddd;
-  border-top: none;
-  border-radius: 0 0 5px 5px;
-}
-
-
-
-/*Liste et texte dans le collapse (inchangé) */
-.collapse-logement ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.collapse-logement li {
-  margin-bottom: 5px;
-  font-size: 14px;
-}
-
-.collapse-logement p {
-  font-size: 14px;
-  margin: 0;
-}
 /* Responsive Design */
 
 @media (max-width: 767.98px) {
@@ -187,18 +129,7 @@
   .titre{
     width: 335px;
   }
-  .collapse_column {
-    flex-direction: column;
-    gap: 10px;
-    width: 335px;
-  }
-  .collapse-logement .collapse-header {
-    width: 335px;
-  }
-  .collapse-logement .collapse-content.open {
-    width: 335px;
-  }
- 
+  
   .titreP1 p{
     font-size: 18px;
   }
@@ -212,8 +143,6 @@
     justify-content: space-between;
     align-items: center;
   }
-
-
 .tags {
   flex-wrap: wrap;
   gap: 8px;
@@ -257,11 +186,8 @@
 }
 
 .rating-star {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 15px;
   gap: 4px;
-  margin: 0;
+  
 }
 
 .star {
@@ -273,21 +199,6 @@
   color: #ff6060;
 }
 
-.collapse-logement .collapse-header {
-  height: 40px;
-  border-radius: 10px;
-  font-size: 14px;
-  padding: 0 15px;
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-.collapse-logement .collapse-content.open {
-  border-radius: 0 0 10px 10px;
-  padding: 10px 15px;
-  font-size: 13px;
-}
 
 
 
