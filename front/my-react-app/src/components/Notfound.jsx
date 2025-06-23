@@ -9,7 +9,10 @@ function NotFound() {
     <div className="not-found">
       <section className="error">
         <h1>404</h1>
-        <h2>Oups! La page que vous demandez n'existe pas.</h2>
+        <h2>
+        Oups ! La page que 
+  <     span class="line-break"> vous demandez n'existe pas.</span>
+        </h2>
       </section>
       <p
         className="back-home"
