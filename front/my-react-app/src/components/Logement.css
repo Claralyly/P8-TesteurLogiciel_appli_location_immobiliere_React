@@ -120,7 +120,7 @@
 @media (max-width: 767.98px) {
   .logement{
     width: 335px;
-    margin-left: 20px;
+    margin-left: 0px;
   }
   .fiche-logement{
     margin-top: 10px;

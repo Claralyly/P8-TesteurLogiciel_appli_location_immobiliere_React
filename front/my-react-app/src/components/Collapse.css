@@ -79,10 +79,11 @@
 /* ========== PAGE A PROPOS ========== */
 .valeur {
   margin-top: 30px;
+  width: 100%;
 }
 
 .collapse-apropos .collapse-header {
-  width: 1023px;
+  width: 75%;
   margin: 0 auto;
   box-sizing: border-box;
   border-radius: 5px;
@@ -93,7 +94,7 @@
 }
 
 .collapse-apropos .collapse-content.open {
-  width: 1023px;
+  width: 75%;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -164,7 +165,7 @@
   .collapse-apropos .collapse-content,
   .collapse-apropos .collapse-content.open {
     
-    max-width: 335px;
+    width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
   }
