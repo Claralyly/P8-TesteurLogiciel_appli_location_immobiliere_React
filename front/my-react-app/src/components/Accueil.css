@@ -4,7 +4,7 @@
   padding: 0 20px;             /* à ajuster si tu veux une marge interne */
   display: flex;
   flex-direction: column;
- 
+ margin-bottom: 40px;
 }
 
 .cards-wrapper {
